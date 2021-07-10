@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/margin_medium"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_medium"
+    app:cardElevation="@dimen/margin_medium"
+    android:padding="0dp"
+    android:layout_height="@dimen/location_sheet_height">
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@color/white"
+   >
+
+
+    <ImageView
+        android:id="@+id/ivCurrentLocationOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginLeft="@dimen/margin_medium_2"
+        android:src="@drawable/ic_icoaddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:layout_marginLeft="12dp"
+        android:textAppearance="?attr/secondary_caption"
+        app:layout_constraintStart_toEndOf="@+id/ivCurrentLocationOn"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Current Location"
+        android:textAppearance="?attr/textAppearanceBody2"
+
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivCurrentLocationOn"
+        app:layout_constraintTop_toBottomOf="@id/tvLocation" />
+
+    <View
+        android:id="@+id/dividerV"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:background="@color/dividerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentLocation" />
+
+    <ImageView
+        android:id="@+id/ivDateTime"
+        android:layout_width="@dimen/app_ic_dimen"
+        android:layout_height="@dimen/app_ic_dimen"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:src="@drawable/ic_icodated"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDateTime" />
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="Location"
+        android:textAppearance="?attr/secondary_caption"
+        app:layout_constraintLeft_toRightOf="@id/ivDateTime"
+
+        app:layout_constraintTop_toBottomOf="@+id/dividerV" />
+
+    <TextView
+        android:id="@+id/tvNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current location"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/text_regular"
+        app:layout_constraintBottom_toBottomOf="@id/ivDateTime"
+        app:layout_constraintStart_toStartOf="@id/tvDateTime" />
+
+
+    <View
+        android:id="@+id/dividerH"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/dividerColor"
+
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dividerV" />
+
+    <ImageView
+        android:id="@+id/ivDuration"
+        android:layout_width="@dimen/app_ic_dimen"
+        android:layout_height="@dimen/app_ic_dimen"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:src="@drawable/ic_icotime"
+
+        app:layout_constraintLeft_toRightOf="@+id/dividerH"
+        app:layout_constraintTop_toBottomOf="@id/tvDateTime" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="Duration"
+        android:textAppearance="?attr/secondary_caption"
+        app:layout_constraintLeft_toRightOf="@id/ivDuration"
+
+        app:layout_constraintTop_toBottomOf="@+id/dividerV" />
+
+    <TextView
+        android:id="@+id/tvHr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 hr"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/text_regular"
+        app:layout_constraintBottom_toBottomOf="@id/ivDateTime"
+        app:layout_constraintStart_toStartOf="@id/tvDuration" />
+
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_bias="1"
+         app:layout_constraintLeft_toRightOf="@id/tvDuration"
+        android:background="@color/teal_200"
+        app:layout_constraintTop_toTopOf="@id/dividerH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="GO"
+            android:gravity="center"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSearchResults"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="70dp"
+            android:gravity="center_vertical"
+            android:text="Booking ID: 44123331"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLanguage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_icoactioncopy"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCarName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Mazda 3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_heading_1x"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+        <TextView
+            android:id="@+id/tvCarModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"
+            android:text="SMS1000Z"
+            android:textAppearance="?attr/subtitle"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCarName" />
+
+        <TextView
+            android:id="@+id/tvCarCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_confirm_status"
+            android:padding="4dp"
+            android:text="CONFIRMED"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvCarModel"
+            app:layout_constraintTop_toBottomOf="@id/tvCarName" />
+
+
+        <TextView
+            android:id="@+id/tvStartDate"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="Start date"
+            android:textAppearance="?attr/secondary_caption"
+            app:layout_constraintEnd_toStartOf="@+id/tvEndDate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCarCode" />
+
+        <TextView
+            android:id="@+id/tvEndDate"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="End date"
+            android:textAppearance="?attr/secondary_caption"
+            app:layout_constraintEnd_toStartOf="@+id/cvDurationTimer"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvStartDate"
+            app:layout_constraintTop_toBottomOf="@id/tvCarCode" />
+
+
+        <TextView
+            android:id="@+id/tvStateDateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="Mon , 1 Nov 20"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintStart_toStartOf="@id/tvStartDate"
+            app:layout_constraintTop_toBottomOf="@id/tvStartDate" />
+
+        <TextView
+            android:id="@+id/tvStateTimeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="11:45 AM"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintStart_toStartOf="@id/tvStartDate"
+            app:layout_constraintTop_toBottomOf="@id/tvStateDateValue" />
+
+        <TextView
+            android:id="@+id/tvEndDateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="Wed , 4 Nov 20"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintStart_toStartOf="@id/tvEndDate"
+            app:layout_constraintTop_toBottomOf="@id/tvEndDate" />
+
+        <TextView
+            android:id="@+id/tvEndTimeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="12:32 PM"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintStart_toStartOf="@id/tvEndDateValue"
+            app:layout_constraintTop_toBottomOf="@id/tvEndDateValue" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvDurationTimer"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            app:cardBackgroundColor="@color/color_dark_blue"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvEndDate"
+            app:layout_constraintTop_toTopOf="@id/tvEndDate">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center"
+                    android:text="@string/duration"
+                    android:textAppearance="?attr/secondary_caption" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="02"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="22"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/margin_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="days"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="hours"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton2"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="Add to calendar"
+            android:textColor="@color/black"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconTint="@color/black"
+
+            app:layout_constraintEnd_toStartOf="@+id/materialButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvDurationTimer" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:gravity="center"
+            android:text="Extend"
+            android:textColor="@color/black"
+            app:icon="@drawable/ic_ctasecondarywithicodark"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/materialButton2"
+            app:layout_constraintTop_toBottomOf="@+id/cvDurationTimer" />
+
+        <TextView
+            android:id="@+id/tvPickUpCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="Pick up car at"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@color/pink"
+            app:layout_constraintStart_toStartOf="@+id/cvContainerMap"
+            app:layout_constraintTop_toBottomOf="@id/materialButton2" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvContainerMap"
+            android:layout_width="150dp"
+
+            android:layout_height="200dp"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPickUpCar">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MapsFragment" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="North Okkalapa"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/cvContainerMap"
+            app:layout_constraintTop_toTopOf="@id/cvContainerMap" />
+
+        <TextView
+            android:id="@+id/tvSubAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_small"
+
+            android:text="No 122 D Block"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/cvContainerMap"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:text="Get Directions"
+            android:textColor="@color/black"
+            app:icon="@drawable/ic_get_dir"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="@color/black"
+            app:layout_constraintLeft_toLeftOf="@id/tvSubAddress"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubAddress" />
+
+
+        <View
+            android:id="@+id/divMap"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="#D1D3D1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvContainerMap" />
+
+        <TextView
+            android:id="@+id/tvEstimatedTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="Estimated Total"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divMap" />
+
+        <ImageView
+            android:layout_width="@dimen/app_ic_dimen"
+            android:layout_height="@dimen/app_ic_dimen"
+            android:src="@drawable/ic_forward"
+            android:id="@+id/ivDetailEstimateTotal"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            app:layout_constraintTop_toTopOf="@id/tvEstimatedTotal"
+            app:layout_constraintBottom_toBottomOf="@id/tvEstimatedTotalValue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$100"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginRight="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="@id/ivDetailEstimateTotal"
+            app:layout_constraintRight_toLeftOf="@id/ivDetailEstimateTotal"
+            app:layout_constraintTop_toTopOf="@id/ivDetailEstimateTotal"
+/>
+
+        <TextView
+            android:id="@+id/tvEstimatedTotalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="*Amount is not final"
+
+            android:textAppearance="?attr/secondary_caption"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEstimatedTotal" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:id="@+id/divEstimateTotal"
+            android:background="@color/dividerColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEstimatedTotalValue"/>
+
+
+        <TextView
+            android:id="@+id/tvNeedHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            android:text="Need help?"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divEstimateTotal" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/dividerColor"
+            android:id="@+id/divNeedHelp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNeedHelp"/>
+
+        <TextView
+            android:id="@+id/tvCancelBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            android:text="Cancel this booking"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divNeedHelp" />
+
+        <ImageView
+            android:layout_width="@dimen/app_ic_dimen"
+            android:layout_height="@dimen/app_ic_dimen"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvCancelBooking"
+            app:layout_constraintBottom_toBottomOf="@id/tvCancelBooking"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:src="@drawable/ic_iccancel"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEstimatedTotalValue"/>
+
+
+        <ImageView
+            android:layout_width="@dimen/app_ic_dimen"
+            android:layout_height="@dimen/app_ic_dimen"
+            android:src="@drawable/ic_icohelp"
+            app:layout_constraintTop_toTopOf="@id/tvNeedHelp"
+            app:layout_constraintBottom_toBottomOf="@id/tvNeedHelp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/margin_medium_2"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

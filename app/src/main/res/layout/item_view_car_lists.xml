@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="424dp"
+        android:layout_height="115dp"
+        android:background="@drawable/bg_square_border_blue_border"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+
+            android:layout_marginStart="6dp"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car"
+            app:shapeAppearance="@style/AppImageShape" />
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/ivPhoto"
+            android:text="Mazda 3"
+
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCarModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/ivPhoto"
+            android:text="SMS1000Z   -"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvCarSeats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/tvCarModel"
+            android:text="5 Seater"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvCarKM"
+            android:gravity="center"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="21dp"
+            android:layout_toEndOf="@id/tvCarSeats"
+            android:background="@drawable/bg_square_dark_grey_border_transparent"
+            android:padding="@dimen/margin_small"
+            android:text=" 0.5KM AWAY"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRentalFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCarModel"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/ivPhoto"
+            android:text="Rental Fee"
+            android:textAppearance="?attr/secondary_caption" />
+
+        <TextView
+            android:id="@+id/tvMileAgeFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCarModel"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/tvRentalFee"
+            android:text="Mileage fee"
+            android:textAppearance="?attr/secondary_caption"
+
+            />
+
+        <TextView
+            android:id="@+id/tvhr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRentalFee"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/ivPhoto"
+            android:text="Fr.$3.00/hr"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvkm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRentalFee"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/tvhr"
+            android:text="$0.40/km"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#5EA0A8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

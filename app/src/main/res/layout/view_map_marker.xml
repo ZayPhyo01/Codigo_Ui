@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="200dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMarker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_medium"
+        android:src="@drawable/bg_marker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvCarCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:fontFamily="@font/roboto_bold"
+        android:text="2"
+        android:textColor="#43AF47"
+        android:textSize="@dimen/text_regular_3x"
+        app:layout_constraintLeft_toLeftOf="@id/ivMarker"
+        app:layout_constraintTop_toTopOf="@id/ivMarker" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available"
+        android:elevation="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/ivMarker"
+        app:layout_constraintRight_toRightOf="@id/ivMarker"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvCarCount"
+        android:textAppearance="?attr/textAppearanceBody2"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:src="@drawable/ic_car"
+        app:layout_constraintBottom_toBottomOf="@id/tvCarCount"
+        app:layout_constraintLeft_toRightOf="@id/tvCarCount"
+        app:layout_constraintStart_toEndOf="@+id/tvCarCount" />
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#222253"
+        android:rotation="135"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMarker"
+        app:layout_constraintLeft_toLeftOf="@id/ivMarker"
+
+        app:layout_constraintRight_toRightOf="@id/ivMarker"
+
+        app:layout_constraintVertical_bias="0.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.CarGo" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="textAppearanceSubtitle1">@style/TexAppearanceSubtitle1Bold</item>
+        <item name="textAppearanceSubtitle2">@style/TexAppearanceSubtitle2Bold</item>
+        <item name="textAppearanceBody2">@style/TextAppearanceLightBody</item>
+        <item name="secondary_caption">@style/TextAppearanceSecondaryCaption</item>
+        <item name="app_image_shape">@style/AppImageShape</item>
+    </style>
+
+    <style name="TexAppearanceSubtitle1Bold" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TexAppearanceSubtitle2Bold" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextAppearanceSecondaryCaption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">#8E8C8C</item>
+    </style>
+
+    <style name="TextAppearanceLightBody" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/roboto_light</item>
+    </style>
+</resources>
